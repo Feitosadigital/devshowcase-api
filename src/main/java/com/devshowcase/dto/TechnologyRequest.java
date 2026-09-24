@@ -1,0 +1,13 @@
+package com.devshowcase.dto;
+
+public class TechnologyRequest {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
