@@ -1,6 +1,7 @@
 package com.devshowcase.dto;
-
+import jakarta.validation.constraints.NotBlank;
 public class TechnologyRequest {
+    @NotBlank
     private String name;
 
     public String getName() {
