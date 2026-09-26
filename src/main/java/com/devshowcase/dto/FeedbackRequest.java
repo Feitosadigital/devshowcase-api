@@ -1,8 +1,14 @@
 package com.devshowcase.dto;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 public class FeedbackRequest {
-private String comment;
+    @NotBlank
+    private String comment;
+    @Min(1)
+    @Max(5)
 private Integer rating;
-private Long projectId;
 
 public String getComment() {
     return comment;
@@ -18,13 +24,5 @@ public Integer getRating() {
 
 public void setRating(Integer rating) {
     this.rating = rating;
-}
-
-public Long getProjectId() {
-    return projectId;
-}
-
-public void setProjectId(Long projectId) {
-    this.projectId = projectId;
 }
 }
